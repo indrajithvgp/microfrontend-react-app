@@ -13,7 +13,7 @@ const prodConfig = {
         publicPath: '/auth/latest/'
     },
     plugins:[
-        new ModuleFederationPlugin({
+        new ModuleFederationPlugin({ 
             name: 'auth',
             filename: 'remoteEntry.js',
             exposes: {
