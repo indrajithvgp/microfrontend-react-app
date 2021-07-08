@@ -1,5 +1,5 @@
 import React, {lazy, Suspense, useState, useEffect} from 'react'
-import {Route, Switch, Router, Redirect} from 'react-router-dom'
+import {Route, Switch, BrowserRouter, Redirect} from 'react-router-dom'
 // import MarketingApp from './components/MarketingApp'
 // import AuthApp from './components/AuthApp'
 import {StylesProvider, createGenerateClassName} from '@material-ui/core/styles'
