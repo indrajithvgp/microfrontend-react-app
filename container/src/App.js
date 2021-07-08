@@ -9,7 +9,7 @@ import Progress from './components/Progress'
 
 const MarketingLazy = lazy(()=> import('./components/MarketingApp'))
 const AuthLazy = lazy(()=> import('./components/AuthApp'))
-const DashboardLazy = lazy(()=> import('./components/DashboardApp'))
+// const DashboardLazy = lazy(()=> import('./components/DashboardApp'))
 
 const generateClassName = createGenerateClassName({
     productionPrefix: 'co'
@@ -20,11 +20,11 @@ export default() => {
     const history = createBrowserHistory()
     const onSignOut = ()=> setIsSignedIn(false)
 
-    useEffect(()=>{
+  {/*   useEffect(()=>{
         if(!isSignedIn) {
             history.push('/dashboard')
         }
-    }, [isSignedIn])
+    }, [isSignedIn]) */}
 
     return (
         <StylesProvider generateClassName={generateClassName}>
@@ -36,10 +36,10 @@ export default() => {
                         <Route path="/auth" exact>
                             <AuthLazy onSignIn={()=> setIsSignedIn(true)}/>
                         </Route>
-                        <Route path="/dashboard" exact >
+                        {/* <Route path="/dashboard" exact >
                             {!isSignedIn && <Redirect to="/"/>}
                             <DashboardApp/>
-                        </Route>
+                        </Route> */}
                         <Route path="/" component={MarketingLazy} />
                     </Switch>
                 </Suspense>
