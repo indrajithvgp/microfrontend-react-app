@@ -28,7 +28,7 @@ export default() => {
 
     return (
         <StylesProvider generateClassName={generateClassName}>
-        <Router history={history}>
+        <BrowserRouter>
             <div>
                 <Header signedIn={isSignedIn} onSignOut={onSignOut}/>
                 <Suspense fallback={<Progress/>}>
@@ -44,7 +44,7 @@ export default() => {
                     </Switch>
                 </Suspense>
             </div>
-        </Router>
+        </BrowserRouter>
         </StylesProvider>
     )
 }
