@@ -33,7 +33,7 @@ export default() => {
                 <Header signedIn={isSignedIn} onSignOut={onSignOut}/>
                 <Suspense fallback={<Progress/>}>
                     <Switch>
-                        <Route path="/auth" exact>
+                        <Route path="/auth">
                             <AuthLazy onSignIn={()=> setIsSignedIn(true)}/>
                         </Route>
                         {/* <Route path="/dashboard" exact >
